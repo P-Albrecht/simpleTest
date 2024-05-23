@@ -4,23 +4,26 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FlaskapiService } from "./flaskapi.service";
-import { EnviromentComponent } from './enviroment/enviroment.component';
-import { EnviromentModule } from './enviroment/enviroment.module';
+import { LlamaService } from 'src/app/llama.service';
+import { SettingsComponent } from 'src/app/settings/settings.component';
+import { TreeViewModule } from 'src/app/tree-view/tree-view.module';
+import { ChatComponent } from 'src/app/chat/chat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    //EnviromentComponent,
+    SettingsComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    EnviromentModule
+    TreeViewModule,
+    
   ],
-  providers: [FlaskapiService],
+  providers: [LlamaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

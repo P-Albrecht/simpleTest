@@ -13,21 +13,17 @@
   export class ChatComponent implements OnInit {
   
     chat = [
-    {type: "response", text:'Hallo, can I help You? !!! ??? ???', hasSpace:'hasNoSpace'},
+    {type: "response", text:'Hallo, can I help You?', hasSpace:'hasNoSpace'},
     ];
   
     loading = false;
   
     constructor(private llamaService: LlamaService)
-      {
-        console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-  
+      {  
         this.llamaService.test()
           .subscribe(
             (response) => {
-              console.log(response.data)
-            console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!ghjghjghjgjgjghj!!!!!!!!!!!!!!!!!!!!!!')
-  
+              console.log(response.data)  
             })
       }
 

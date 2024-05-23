@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Params, Router } from "@angular/router";
 import { HttpClient } from '@angular/common/http';
-import { FlaskapiService } from './flaskapi.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +18,7 @@ export class AppComponent {
     ],
   ]
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private http: HttpClient, private flaskapiService: FlaskapiService) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private http: HttpClient) {
   }
 
   async ngOnInit() {
@@ -45,5 +44,14 @@ export class AppComponent {
       window.location.reload();                                                                                       
     });                                                                                                               
   }     
+
+
+
+  treeInputValue = [{name: 'aaa'}, {name: 'bbb', children: [{name: 'bbb1'}, {name: 'bbb2'}]}, {name: 'ccc'} ]
+
+  nodeSelectEventOutputEvent(response: any) {
+    
+  }
+
 }
 
