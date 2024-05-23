@@ -22,4 +22,10 @@ export class EnviromentComponent {
   onClickMe() {
     console.log('...........')
   }
+
+  treeInputValue = 
+
+  nodeSelectEventOutputEvent(response: any) {
+    
+  }
 }
